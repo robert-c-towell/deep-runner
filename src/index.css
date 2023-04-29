@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  background-color: #1D1B24;
+  color: #dbd8ec;
+  font-family: Inconsolata;
+}
+
+code {
+  font-family: 'Syncopate-Regular';
+  font-size: 14px;
+}
+
+@font-face {
+  font-family: 'Inconsolata';
+  src: url(./fonts/Inconsolata.ttf);
+}
+
+@font-face {
+  font-family: 'Syncopate-Regular';
+  src: url(./fonts/Syncopate-Regular.ttf);
+}
