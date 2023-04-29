@@ -1,12 +1,7 @@
 import { useEffect } from 'react';
 import _ from 'lodash';
 import timeout from '../../lib/timeout'
-
-const getRandomInt = (min, max) => {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min) + min);
-}
+import getRandomInt from '../../lib/get-random-int'
 
 const TextReveal = (props) => {
   let id = _.uniqueId('text-reveal-');
