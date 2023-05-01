@@ -7,7 +7,7 @@ const ChoiceMatrix = () => {
       <Button className={classes.button} onClick={() => {}}>Is that really such a good idea?</Button>
       <Button className={classes.button} onClick={() => {}}>You're never going to make it out of here alive.</Button>
       <Button className={classes.button} onClick={() => {}}>Alright alright, no need to get pushy.</Button>
-      <Button className={classes.button} onClick={() => {}}>Lets bet on it.</Button>
+      <Button className={classes.button} onClick={() => {}}>Let's bet on it.</Button>
     </div>
   </div>
 }
