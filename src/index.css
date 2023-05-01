@@ -7,6 +7,7 @@
   --dark-purple: rgb(50, 43, 65);
   --light-purple:rgb(125, 109, 143);
   --nav-bar-height: 60px;
+  --footer-height: 40px;
 }
 
 body {
@@ -46,4 +47,8 @@ input {
   -webkit-user-select: auto; /* Safari */
   -ms-user-select: auto; /* IE 10 and IE 11 */
   user-select: auto; /* Standard syntax */
+}
+
+:focus {
+  outline: none;
 }

@@ -1,0 +1,23 @@
+.MainContent {
+  width: 100%;
+  height: calc(100vh - var(--nav-bar-height) - var(--footer-height));
+}
+
+.row {
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.column {
+  float: left;
+  padding: 5px;
+}
+
+.location-list {
+  margin-right: 10px;
+}
+
+.access-list {
+  margin-left: 10px;
+}

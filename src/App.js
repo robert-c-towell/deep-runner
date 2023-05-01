@@ -9,6 +9,7 @@ import Image from "./components/Layout/MainContent/Image";
 
 import classes from "./App.module.css";
 import Footer from "./components/Layout/Footer/Footer";
+import MainContent from "./components/Layout/MainContent/MainContent";
 
 function App() {
   const [saveModalIsOpen, setSaveModalIsOpen] = useState(false);
@@ -57,10 +58,7 @@ function App() {
       {saveModalIsOpen ? <SaveModal onClose={closeSaveModal} /> : <></>}
       {shareModalIsOpen ? <ShareModal onClose={closeShareModal} /> : <></>}
       <NavigationBar />
-      <div className={classes["content-wrap"]}>
-        {/* <Image src={<BlackHole />} /> */}
-        <Wakeup />
-      </div>
+      <MainContent />
       <Footer
         isDarkMode={isDarkMode}
         isSound={isSound}

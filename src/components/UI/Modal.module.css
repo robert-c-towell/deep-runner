@@ -13,9 +13,9 @@
   top: 20vh;
   left: 5%;
   width: 90%;
-  background-color: var(--dark-purple);
+  background-color: var(--space);
   padding: 1rem;
-  border-radius: 14px;
+  border: 1px solid var(--light-purple);
   box-shadow: 0 2px 8px var(--shadow);
   z-index: 30;
   animation: slide-down 300ms ease-out forwards;
