@@ -58,7 +58,7 @@ function App() {
       {shareModalIsOpen ? <ShareModal onClose={closeShareModal} /> : <></>}
       <NavigationBar />
       <div className={classes["content-wrap"]}>
-        <Image src={<BlackHole />} />
+        {/* <Image src={<BlackHole />} /> */}
         <Wakeup />
       </div>
       <Footer

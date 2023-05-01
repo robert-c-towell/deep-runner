@@ -1,19 +1,10 @@
-import ReactDOM from 'react-dom'
+import Splash from './Splash'
+
 import classes from './Image.module.css'
-
-const ImageOverlay = (props) => {
-  return <div className={classes['image-wrapper']}>
-    <div className={classes.ImageOverlay}>
-    {props.src}
-    </div>
-  </div>
-}
-
-const portalSplash = document.getElementById('splash')
 
 const Image = (props) => {
   return <>
-    {ReactDOM.createPortal(<ImageOverlay src={props.src} />, portalSplash)}
+    <Splash>{props.src}</Splash>
     <div className={classes.Image}>
       {props.src}
     </div>
