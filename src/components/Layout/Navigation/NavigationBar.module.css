@@ -1,0 +1,17 @@
+.NavigationBar {
+  height: var(--nav-bar-height);
+  position: relative;
+}
+
+.nav-wrapper {
+  max-width: 800px;
+  margin:auto;
+  float:left;
+  position:absolute;
+  bottom:0;
+}
+
+.nav-wrapper div,button {
+  display:inline-block;
+  margin-right: 10px;
+}
