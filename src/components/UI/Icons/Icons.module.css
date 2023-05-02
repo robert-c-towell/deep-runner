@@ -1,0 +1,13 @@
+.Warning {
+  color: rgb(255, 234, 117);
+  animation: flash 2s ease-in infinite alternate;
+}
+
+@keyframes flash {
+  from {
+    color: rgb(255, 234, 117);
+  }
+  to {
+    color: rgb(255, 126, 117);
+  }
+}

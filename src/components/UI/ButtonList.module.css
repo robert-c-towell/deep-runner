@@ -1,11 +1,29 @@
 .ButtonList {
   display:inline-block;
   height: 100%;
-  width: 120px;
+  width: 150px;
 }
 
 .ButtonList button {
   text-align: left;
   margin: 0 0px 10px 0px;
-  width: 100%;
+  width: calc(100% - 30px);
+}
+
+.ButtonList.left button {
+  float: right
+}
+.ButtonList.left svg {
+  float: left
+}
+
+.ButtonList.right button {
+  float: left
+}
+.ButtonList.right svg {
+  float: right
+}
+
+.ButtonList svg {
+  margin: 5px;
 }
