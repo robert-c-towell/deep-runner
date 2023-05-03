@@ -6,7 +6,7 @@ import getRandomInt from '../../lib/get-random-int'
 const TextReveal = (props) => {
   let id = _.uniqueId('text-reveal-');
 
-  let punctRegex = new RegExp(/[?.!]/);
+  let punctRegex = new RegExp(/[?.!;]/);
 
   useEffect(() => {
     const a = async () => {
@@ -42,9 +42,9 @@ const TextReveal = (props) => {
       }
     }; 
     a();
-  }, []);
+  });
 
-  return <p id={id}></p>
+  return <div id={id}></div>
 }
 
 export default TextReveal;

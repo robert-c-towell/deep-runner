@@ -1,11 +1,7 @@
 import { useState } from "react";
-import { ReactComponent as BlackHole } from "./assets/run_away_black_hole.svg";
-import Wakeup from "./components/Wakeup/Wakeup";
 import SaveModal from "./components/Layout/Footer/SaveModal";
 import ShareModal from "./components/Layout/Footer/ShareModal";
 import NavigationBar from "./components/Layout/Navigation/NavigationBar";
-import Image from "./components/Layout/MainContent/Image";
-// import { Hash } from "./lib/hash";
 
 import classes from "./App.module.css";
 import Footer from "./components/Layout/Footer/Footer";

@@ -1,4 +1,4 @@
-import Splash from './Splash'
+import Splash from '../Splash/Splash'
 
 import classes from './Image.module.css'
 

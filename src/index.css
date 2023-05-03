@@ -35,12 +35,12 @@ code {
 
 @font-face {
   font-family: 'Inconsolata';
-  src: url(./fonts/Inconsolata.ttf);
+  src: url(./assets/fonts/Inconsolata.ttf);
 }
 
 @font-face {
   font-family: 'Syncopate-Regular';
-  src: url(./fonts/Syncopate-Regular.ttf);
+  src: url(./assets/fonts/Syncopate-Regular.ttf);
 }
 
 input {
