@@ -3,48 +3,36 @@ import _ from 'lodash';
 import timeout from '../../lib/timeout'
 import getRandomInt from '../../lib/get-random-int'
 
+import classes from './TextReveal.module.css'
+
 const TextReveal = (props) => {
-  let id = _.uniqueId('text-reveal-');
+  let divId = _.uniqueId('text-reveal-');
 
   let punctRegex = new RegExp(/[?.!;]/);
 
   useEffect(() => {
     const a = async () => {
-      let p = document.getElementById(id);
-      for (let portion of props.children) {
-        if (typeof portion === 'string') {
-          for (let sentence of portion.split(/(?<=[?.!])/)) {
-            for (let word of sentence.split(/(?<=\s)/)) {
-              for (let letter of word) {
-                p.innerHTML += letter;
-                await timeout(getRandomInt(20, 40));
-              }
-            }
-            await timeout(getRandomInt(200,350));
-            if (punctRegex.test(p.innerHTML[p.innerHTML.length -1])) {
-              p.innerHTML += '</br>';
-            }
+      let div = document.getElementById(divId);
+      for (let sentence of props.children.split(/(?<=[?.!;])/)) {
+        let id = _.uniqueId('tr-');
+        div.innerHTML += `<p id=${id}>`;
+        let p = document.getElementById(id);
+        for (let word of sentence.split(/(?<=\s)/)) {
+          for (let letter of word) {
+            p.innerHTML += letter;
+            await timeout(getRandomInt(20, 40));
           }
-        } else if (portion.type === 'code') {
-          let codeId = _.uniqueId('text-reveal-');
-          p.innerHTML += ` <code id=${codeId}>`
-          let code = document.getElementById(codeId);
-          for (let sentence of portion.props.children.split(/(?<=[?.!])/)) {
-            for (let word of sentence.split(/(?<=\s)/)) {
-              for (let letter of word) {
-                code.innerHTML += letter;
-                await timeout(getRandomInt(400, 450));
-              }
-            }
-            await timeout(getRandomInt(200,350));
-          }
+        }
+        await timeout(getRandomInt(300, 450));
+        if (punctRegex.test(div.innerHTML[div.innerHTML.length -1])) {
+          div.innerHTML += '</br>';
         }
       }
     }; 
     a();
   });
 
-  return <div id={id}></div>
+  return <div className={classes.TextReveal} id={divId}></div>
 }
 
 export default TextReveal;

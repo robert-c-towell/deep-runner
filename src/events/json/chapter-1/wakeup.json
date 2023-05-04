@@ -1,0 +1,80 @@
+[
+  {
+    "tag": "wakeup",
+    "dialogue": {
+        "d": "Good morning captain. You have been in cryo for ${cryoAge} years. Do you remember your name?"
+    },
+    "input": {
+        "var": "playerName",
+        "match": [
+            {
+                "regex": "/^([Nn][Oo]|[Yy][Ee][Ss]|[Mm][Aa][Yy][Bb][Ee])$/",
+                "to_tag": "very_funny",
+                "update_var": [
+                    {
+                        "var": "funnyNameCount",
+                        "op": "+",
+                        "val": 1
+                    }
+                ]
+            },
+            {
+                "to_tag": "remembered"
+            }
+        ]
+    }
+  },
+  {
+    "tag": "very_funny",
+    "dialogue": {
+        "d": "Very funny Captain. What is your name?"
+    },
+    "options": {
+        "var": "playerName",
+        "match": [
+            {
+                "regex": "/^([Nn][Oo]|[Yy][Ee][Ss]|[Mm][Aa][Yy][Bb][Ee])$/",
+                "to_tag": "very_funny",
+                "update_var": [
+                    {
+                        "var": "funnyNameCount",
+                        "op": "+",
+                        "val": 1
+                    }
+                ]
+            },
+            {
+                "to_tag": "remembered"
+            }
+        ]
+    },
+    "after": {
+        "match": [
+            {
+                "var": "funnyNameCount",
+                "op": "=",
+                "val": 3,
+                "to_tag": "dead"
+            }
+        ]
+    }
+  },
+  {
+    "tag": "dead",
+    "dialogue": {
+        "d": "Captain, I have determined your cryofreeze burns have caused severe brain damage. There's nothing I can do. Goodbye.",
+        "update_var": [
+            {
+                "var": "gameOver",
+                "val": true
+            }
+        ]
+    }
+  },
+  {
+    "tag": "confirmed",
+    "dialogue": {
+        "d": "That's correct. Health diagnostics complete.  You may experience flu-like symptoms for the next ${cryoSicknessDuration} days. The Satari attack damaged our solar array and capsized the main fuel cells.  To conserve power I placed you in deep freeze and went into hibernation.  After two centuries we reached the gas giant Myntrasol-2 where we have been orbiting, pulling fuel from the atmosphere. A scavenger came to part us out. He's waiting in the conference room."
+    }
+  }
+]

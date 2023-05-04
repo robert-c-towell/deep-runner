@@ -1,4 +1,13 @@
 .Dialogue {
   width: 800px;
-  height: 600px;
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-bottom: 50px;
+  overflow: hidden;
+}
+
+.Dialogue p {
+  bottom: 0;
 }
